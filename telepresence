@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+#Telepresence wrapper
+
+exec docker-compose run --rm telepresence-cli "$@"

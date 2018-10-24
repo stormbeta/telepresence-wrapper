@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  telepresence-cli:
+    build:
+      context: .
+    image: telepresence-wrapper
+    privileged: true
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "${HOME}/.kube:/root/.kube"
+    network_mode: host
