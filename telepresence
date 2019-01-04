@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-#Telepresence wrapper
+# Telepresence wrapper
+# NOTE: not symlinkable
 
 exec docker-compose -f "$(dirname "$0")/docker-compose.yml" run --rm telepresence-cli "$@"
